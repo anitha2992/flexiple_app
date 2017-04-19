@@ -33,7 +33,7 @@
                     $(document).ready(function(){
 			        $('#logout').on('click', function(e){
 			            if(confirm("Are you sure you want to logout?"))
-			                window.location.href = "http://localhost/Flexiple/registeredLogin.php";
+			                window.location.href = "http://localhost/Flexiple/index.php";
 
 			            return false;
 			        });

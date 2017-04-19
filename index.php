@@ -31,7 +31,7 @@
         	<div class="form-group row">
          		<label class="col-sm-4 control-label">Password</label>
           		<div class="col-sm-4">
-            		<input class="form-control" type="password" pattern="(?=(.*[`!@#$%\^&*\-_=\+'/\.,]){2}).*(?=(.*[A-Z]){2})" minlength="4" maxlength="8" placeholder="Password" id="inputPassword" name="ps">
+            		<input class="form-control" type="password" placeholder="Password" id="inputPassword" name="ps">
           		</div>
                 <br>
         	</div>

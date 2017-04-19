@@ -32,14 +32,14 @@
             	<div class="form-group row">
              		<label class="col-sm-4 control-label">New Password</label>
               		<div class="col-sm-4">
-                		<input class="form-control" type="password" pattern="(?=(.*[`!@#$%\^&*\-_=\+'/\.,]){2}).*(?=(.*[A-Z]){2})" minlength="4" maxlength="8" placeholder="Password" id="inputPassword" name="ps">
+                		<input class="form-control" type="password" minlength="4" maxlength="8" placeholder="Password" id="inputPassword" name="ps">
               		</div>
                     <br>
             	</div>
                 <div class="form-group row">
                     <label class="col-sm-4 control-label">Confirm Password</label>
                     <div class="col-sm-4">
-                        <input class="form-control" type="password" pattern="(?=(.*[`!@#$%\^&*\-_=\+'/\.,]){2}).*(?=(.*[A-Z]){2})" minlength="4" maxlength="8" placeholder="Confirm Password" id="inputConfirmPassword">
+                        <input class="form-control" type="password" minlength="4" maxlength="8" placeholder="Confirm Password" id="inputConfirmPassword">
                     </div>
                     <br>
                 </div>
@@ -54,7 +54,13 @@
                     function Validate() {
                         var password = document.getElementById("inputPassword").value;
                         var confirmPassword = document.getElementById("inputConfirmPassword").value;
-                        if (password != confirmPassword) {
+                        if(!password.match("((?=(.*[!@#$%\^&\*\-_=\+'/\.,]){2}).*(?=(.*[A-Z]){2}))")) {
+                            alert("Passwords should contain atleast 2 special characters and atleast 2 uppercase letters.");
+                        }
+                        if(!confirmPassword.match("((?=(.*[!@#$%\^&\*\-_=\+'/\.,]){2}).*(?=(.*[A-Z]){2}))")) {
+                            alert("Passwords should contain atleast 2 special characters and atleast 2 uppercase letters.");
+                        }
+                        if(password != confirmPassword) {
                             alert("Passwords do not match.");
                             return false;
                         }
